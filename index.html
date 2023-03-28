@@ -6,43 +6,52 @@
 	<title>Iframe Responsive</title>
 	<style>
 		iframe {
-			height: 700px;
+			height: 720px;
 			width: 100%;
-			display: none; /* Ocultar los iframes inicialmente */
+			display: none;
 		}
 	</style>
 </head>
 <body>
-	<div style="max-width: 600px; margin: 0 auto;">
-		<iframe id="miIframe1" src="https://widgets.woxo.tech/accb97e8-7255-4758-94ba-58de904dc5d4" frameborder="0" allowfullscreen></iframe>
-	</div>
-
-	<div style="max-width: 600px; margin: 0 auto;">
-		<iframe id="miIframe2" src="https://widgets.woxo.tech/e89e16f8-7fb7-4eb4-98ef-76a104732928" frameborder="0" allowfullscreen></iframe>
-	</div>
-
-	<div style="max-width: 600px; margin: 0 auto;">
-		<iframe id="miIframe3" src="https://widgets.woxo.tech/4e05bdff-c277-42e6-80a0-22e987c853ba" frameborder="0" allowfullscreen></iframe>
+	<div id="iframes-container" style="max-width: 600px; margin: 0 auto;">
+		<div class="iframe-wrapper">
+			<iframe src="https://widgets.woxo.tech/accb97e8-7255-4758-94ba-58de904dc5d4" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="iframe-wrapper">
+			<iframe src="https://widgets.woxo.tech/e89e16f8-7fb7-4eb4-98ef-76a104732928" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="iframe-wrapper">
+			<iframe src="https://widgets.woxo.tech/4e05bdff-c277-42e6-80a0-22e987c853ba" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div>
 
 	<script>
-		// Obtener los elementos de los iframes
-		var iframes = document.getElementsByTagName("iframe");
+		// Obtener los contenedores de los iframes
+		var iframeWrappers = document.getElementsByClassName("iframe-wrapper");
 
-		// Aplicar el algoritmo de Fisher-Yates para reordenar los iframes aleatoriamente
-		for (var i = iframes.length - 1; i > 0; i--) {
-		    var j = Math.floor(Math.random() * (i + 1));
-		    var temp = iframes[i];
-		    iframes[i] = iframes[j];
-		    iframes[j] = temp;
+		// Crear un array para almacenar los contenedores
+		var iframesArray = [];
+
+		// Llenar el array con los contenedores
+		for (var i = 0; i < iframeWrappers.length; i++) {
+			iframesArray.push(iframeWrappers[i]);
 		}
+
+		// Reordenar los contenedores aleatoriamente
+		iframesArray.sort(function() {
+			return Math.random() - 0.5;
+		});
 
 		// Mostrar los iframes en el nuevo orden
-		for (var i = 0; i < iframes.length; i++) {
-		    iframes[i].style.display = "block";
+		var iframesContainer = document.getElementById("iframes-container");
+		for (var i = 0; i < iframesArray.length; i++) {
+			var iframeWrapper = iframesArray[i];
+			var iframe = iframeWrapper.getElementsByTagName("iframe")[0];
+			iframe.style.display = "block";
+			iframeWrapper.style.order = i + 1;
+			iframesContainer.appendChild(iframeWrapper);
 		}
 	</script>
-
 </body>
 </html>
 
