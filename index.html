@@ -39,6 +39,34 @@
 </head>
 <body>
 <img class="logo" src="logo2.png" alt="Bahía Círcula">
+
+ <script defer>
+      window.onload = function() {
+        var texto = document.getElementById("miTexto");
+        texto.style.display = "block";
+        setTimeout(function() {
+          texto.style.display = "none";
+        }, 7000); // 20 segundos en milisegundos
+      }
+    </script>
+
+     <div id="miTexto" style="display: none;">
+      <h1 style="text-align:center"><span style="font-family:Verdana,Geneva,sans-serif">Danos unos segundos que estamos actualizando y organizando la informaci&oacute;n</span></h1>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="grid-container">
 		<div class="grid-item"><iframe src="./frames/1.html" frameborder="0" allowfullscreen></iframe></div>
 		<div class="grid-item"><iframe src="./frames/2.html" frameborder="0" allowfullscreen></iframe></div>
