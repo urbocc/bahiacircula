@@ -1,64 +1,131 @@
-
-
 <!DOCTYPE html>
 <html>
-<head><body>
-<script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Saalir Bahía Blanca</title>
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-gap: 20px;
+			margin: 0 auto;
+			max-width: 1200px;
+		}
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var lat = position.coords.latitude;
-      var long = position.coords.longitude;
-      var ciudad = getCiudad(lat, long);
-      window.location.href = ciudad ;
-    });
-  } else {
-    // Manejo del caso en el que el navegador no soporte geolocalización
-  }
+		.grid-item {
+  position: relative;
+  padding-bottom: 160%; /* Ratio de aspecto de 16:9 para una altura de 700px */
+  height: 0;
+  overflow: hidden;
+}
 
-  function getCiudad(lat, long) {
-    // Aquí puedes definir las coordenadas y nombres de las ciudades
-    var ciudades = [
-      { nombre: 'madrid', lat: 40.416775, long: -3.703790 },
-      { nombre: 'barcelona', lat: 41.385063, long: 2.173404 },
-      { nombre: 'sevilla', lat: 37.389092, long: -5.984459 },
-      { nombre: 'bahiablanca', lat: -38.719594, long: -62.266402 },
-      { nombre: 'laplata', lat: -34.921452, long: -57.954528 },
 
-      // Añade más ciudades con sus coordenadas
-    ];
-    
-    // Busca la ciudad más cercana a las coordenadas dadas
-    var distanciaMinima = Number.MAX_VALUE;
-    var ciudadMasCercana = '';
-    for (var i = 0; i < ciudades.length; i++) {
-      var ciudadActual = ciudades[i];
-      var distancia = calcularDistancia(lat, long, ciudadActual.lat, ciudadActual.long);
-      if (distancia < distanciaMinima) {
-        distanciaMinima = distancia;
-        ciudadMasCercana = ciudadActual.nombre;
-      }
-    }
-    
-    return ciudadMasCercana;
-  }
-  
-  function calcularDistancia(lat1, long1, lat2, long2) {
-    // Aquí puedes utilizar alguna fórmula para calcular la distancia entre dos puntos geográficos
-    // Por ejemplo, puedes usar la fórmula de Haversine: https://en.wikipedia.org/wiki/Haversine_formula
-    // En este ejemplo, se utiliza una fórmula aproximada
-    var r = 6371; // Radio de la Tierra en kilómetros
-    var dLat = (lat2 - lat1) * Math.PI / 180;
-    var dLong = (long2 - long1) * Math.PI / 180;
-    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-            Math.sin(dLong/2) * Math.sin(dLong/2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-    var d = r * c;
-    return d;
-  }
-</script>
+		.grid-item iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+	</style>
+</head>
+<body>
+<img class="logo" src="https://saalir.com/logo2.png" alt="">
 
+
+  <div id="miImagen">
+      <h2 style="text-align:center"><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif">Danos unos segundos que estamos actualizando y organizando la informaci&oacute;n</span></h2>
+
+<h1 style="text-align:center"><span style="font-family:Verdana,Geneva,sans-serif"><img alt="" src="https://media.tenor.com/6be0tZhr50QAAAAC/lazy-cat.gif" /></span></h1>
+    </div>
+    <script>
+      setTimeout(function() {
+        document.getElementById("miImagen").style.display = "none";
+      }, 8000); // 5 segundos en milisegundos
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="grid-container">
+		<div class="grid-item"><iframe src="./bahiablanca/frames/1.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/2.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/3.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/4.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/5.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/6.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/7.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/8.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/9.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/10.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/11.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/12.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/13.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/14.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/15.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/16.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/17.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/18.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/19.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/20.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/21.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/22.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/23.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/24.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/25.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/26.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/27.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/28.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/29.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/30.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/31.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/32.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./bahiablanca/frames/33.html" frameborder="0" allowfullscreen></iframe></div>
+		
+		
+		
+	</div>
+
+	<script>
+		// Obtener los elementos de los divs que contienen los iframes
+		var divs = document.querySelectorAll(".grid-item");
+
+		// Crear un array para almacenar los índices de los divs
+		var indicesDivs = [];
+
+		// Llenar el array con los índices de los divs
+		for (var i = 0; i < divs.length; i++) {
+			indicesDivs.push(i);
+		}
+
+		// Reordenar los índices aleatoriamente
+		indicesDivs.sort(function() {
+			return Math.random() - 0.5;
+		});
+
+		// Mostrar los divs (y por ende los iframes) en el nuevo orden
+		for (var i = 0; i < divs.length; i++) {
+			var indiceDiv = indicesDivs[i];
+			var div = divs[indiceDiv];
+			div.style.order = i + 1;
+		}
+	</script>
 
 </body>
 </html>
+
