@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Saalir Bahía Blanca</title>
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-gap: 20px;
+			margin: 0 auto;
+			max-width: 1200px;
+		}
+
+		.grid-item {
+  position: relative;
+  padding-bottom: 160%; /* Ratio de aspecto de 16:9 para una altura de 700px */
+  height: 0;
+  overflow: hidden;
+}
+
+
+		.grid-item iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+	</style>
+</head>
+<body>
+<img class="logo" src="logo2.png" alt="Bahía Círcula">
+
+
+  <div id="miImagen">
+      <h2 style="text-align:center"><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif">Danos unos segundos que estamos actualizando y organizando la informaci&oacute;n</span></h2>
+
+<h1 style="text-align:center"><span style="font-family:Verdana,Geneva,sans-serif"><img alt="" src="https://media.tenor.com/6be0tZhr50QAAAAC/lazy-cat.gif" /></span></h1>
+    </div>
+    <script>
+      setTimeout(function() {
+        document.getElementById("miImagen").style.display = "none";
+      }, 8000); // 5 segundos en milisegundos
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="grid-container">
+		<div class="grid-item"><iframe src="./frames/1.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/2.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/3.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/4.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/5.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/6.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/7.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/8.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/9.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/10.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/11.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/12.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/13.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/14.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/15.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/16.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/17.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/18.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/19.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/20.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/21.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/22.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/23.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/24.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/25.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/26.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/27.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/28.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/29.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/30.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/31.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/32.html" frameborder="0" allowfullscreen></iframe></div>
+		<div class="grid-item"><iframe src="./frames/33.html" frameborder="0" allowfullscreen></iframe></div>
+		
+		
+		
+	</div>
+
+	<script>
+		// Obtener los elementos de los divs que contienen los iframes
+		var divs = document.querySelectorAll(".grid-item");
+
+		// Crear un array para almacenar los índices de los divs
+		var indicesDivs = [];
+
+		// Llenar el array con los índices de los divs
+		for (var i = 0; i < divs.length; i++) {
+			indicesDivs.push(i);
+		}
+
+		// Reordenar los índices aleatoriamente
+		indicesDivs.sort(function() {
+			return Math.random() - 0.5;
+		});
+
+		// Mostrar los divs (y por ende los iframes) en el nuevo orden
+		for (var i = 0; i < divs.length; i++) {
+			var indiceDiv = indicesDivs[i];
+			var div = divs[indiceDiv];
+			div.style.order = i + 1;
+		}
+	</script>
+
+</body>
+</html>
+
